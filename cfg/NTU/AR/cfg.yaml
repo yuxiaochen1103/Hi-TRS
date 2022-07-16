@@ -1,0 +1,36 @@
+linear: 0
+load_pretrained: 1
+ckpt_iter_num: 30000
+
+log_pth: './training_log/AR/NTU_60'
+#dataset
+w_size: 7
+stride: 7
+dilate: 2
+
+#dataset
+label_num: 60
+benchmark: xsub
+view: 'joint'
+data_part: 'all'
+
+#data_loader
+batch_size: 32
+accum_iter: 4
+workers: 4
+
+#model training
+epochs: 70
+
+#training parameter
+#lr: 0.0005
+weight_decay: 0.01
+dp_rate: 0.2
+
+lr: 0.0004
+
+#model structure
+d_model: 128
+nhead: 8
+d_att: 64
+layer_num: 3
